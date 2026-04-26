@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CourseList } from './features/courses/course-list/course-list';
+import { CourseForm } from './features/courses/course-form/course-form';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, CourseList],
+  imports: [CommonModule, CourseList, CourseForm],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
