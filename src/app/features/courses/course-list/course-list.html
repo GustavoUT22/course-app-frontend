@@ -13,6 +13,7 @@
       <li>Precio: <strong>{{item.price}}</strong></li>
       <li>Inicio: <i>{{item.startDate | date: 'dd/MM/yyyy'}}</i></li>
     </ul>
+    <a [routerLink]="['/courses', item.id]">Ver Detalle</a>
   </div>
 }
 </div>
