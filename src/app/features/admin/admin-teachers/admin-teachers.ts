@@ -14,6 +14,20 @@ export class AdminTeachers implements OnInit {
 
   private userService = inject(UserService);
 
+  get allActives() {
+    return this.users().filter((user) => user.status === 'active').length;
+  }
+  get allPending() {
+    return this.users().filter((user) => user.status === 'pending').length;
+  }
+  get allSuspended() {
+    return this.users().filter((user) => user.status === 'suspended').length;
+  }
+
+  get allLenghtUsers() {
+    return this.users().length;
+  }
+
   ngOnInit(): void {
     this.userService.getUsers().subscribe({
       next: (data) => {
